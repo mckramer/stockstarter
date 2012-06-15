@@ -1,0 +1,17 @@
+= simple_form_for @company, :html => { :class => 'form-horizontal' } do |f|
+  - if @company.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:"
+      %ul
+        - @company.errors.full_messages.each do |msg|
+          %li= msg
+  .form-inputs
+    = f.input :name
+    = f.input :description
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = submit_tag 'Reset', type: :reset, class: "btn btn-danger"
+    - if @company.new_record?
+      = link_to 'Cancel, and return to viewing companies', companies_path, class: "btn"
+    - else
+      = link_to 'Cancel, and return to viewing the company', @company, class: "btn"

@@ -1,0 +1,9 @@
+= simple_form_for @user, :url => password_reset_path(@user), :html => {:method => :put} do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :email
+    = f.input :password
+    = f.password :password_confirmation
+  = f.hidden :token, @token
+  .form-actions
+    = f.button :submit

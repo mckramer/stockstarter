@@ -1,0 +1,15 @@
+- content_for :page_title, "User"
+%p#notice= notice
+%p
+  %b Company:
+  = @funding_round.company
+%p
+  %b Number of shares:
+  = @funding_round.number_of_shares
+%p
+  %b Cost per share:
+  = @funding_round.cost_per_share
+.well
+  = link_to 'Edit', edit_funding_round_path(@funding_round)
+  \|
+  = link_to 'Back', funding_rounds_path

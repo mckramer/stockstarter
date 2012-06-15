@@ -1,0 +1,17 @@
+- content_for :page_title, "Contact us"
+- content_for :page_subtitle, "Bleep blorp"
+%p We aim to be as available as possible to make your experience great.
+%h3 Routes
+%p Through email: email@stockstarter.com
+%p Through form:
+%form
+  %formset
+    %legend Contact us
+    %label asdasd
+%h3 Social media
+%p Find us and connect with us.
+%ul.thumbnails
+  %li.span3= link_to image_tag("http://placehold.it/260x180/ffffff"), "https://twitter.com/", class: "thumbnail"
+  %li.span3= link_to image_tag("http://placehold.it/260x180/ffffff"), "https://facebook.com/", class: "thumbnail"
+  %li.span3= link_to image_tag("http://placehold.it/260x180/ffffff"), "https://foursquare.com/", class: "thumbnail"
+  %li.span3= link_to image_tag("http://placehold.it/260x180/ffffff"), "https://google.com/plus", class: "thumbnail"

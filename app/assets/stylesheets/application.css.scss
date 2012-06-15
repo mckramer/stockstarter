@@ -1,0 +1,71 @@
+/*
+ * Application styles
+ */
+ 
+/* >> Setup bootstrap >> */
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+.navbar {
+  margin-bottom: 0px;
+  .brand {
+    color: $grayDark;
+    font-family: Codystar;
+  }
+  .navbar-inner {
+    @include border-radius(0px);
+  }
+}
+.dropdown.open  .dropdown-toggle {
+  color: $grayDark;
+}
+.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+  color: $grayLight;
+}
+.hero-unit {
+  background-attachment: scroll;
+  background-image: image_url('bg-noise.jpg');
+  background-repeat: repeat;
+  @include border-radius(0px);
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.hero-compact {
+  padding: 20px 50px;
+}
+
+.navbar .nav .dropdown-toggle .caret, .navbar .nav .open.dropdown .caret {
+  border-top-color: $grayDark;
+}
+
+// << Finished boostrap setup <<
+
+// >> Custom stylings >>
+
+@import "companies";
+@import "company_users";
+@import "funding_rounds";
+@import "pages";
+@import "users";
+
+// << Custom stylings <<
+
+body {
+  /*margin-top: 5px;*/
+}
+
+footer#footer {
+  border-top: 1px solid $grayLighter;
+  margin-top: 17px;
+  padding-top: 30px;
+  
+  a:link {
+    margin-right: 15px;
+  }
+}

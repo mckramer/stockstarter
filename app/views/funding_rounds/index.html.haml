@@ -1,0 +1,20 @@
+- content_for :page_title, "View the funding rounds"
+- unless @funding_rounds.empty?
+  %table
+    %tr
+      %th Company
+      %th Number of shares
+      %th Cost per share
+      %th
+    - @funding_rounds.each do |funding_round|
+      %tr
+        %td= funding_round.company
+        %td= funding_round.number_of_shares
+        %td= funding_round.cost_per_share
+        %td
+          = link_to funding_round do
+            %i.icon-search
+            View
+- else
+  %p Sorry, there are no funding rounds.
+.well= link_to 'New Funding round', new_funding_round_path, class: 'btn'

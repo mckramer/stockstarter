@@ -1,0 +1,14 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  site_title: "StockStarter"
+  site_slogan: "Share in success"
+  companies:
+    index:
+      title: ""
+    new:
+      title: "Add new company"
+      button: "Add new company"
+    edit:
+    show: 

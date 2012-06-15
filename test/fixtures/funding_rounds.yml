@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company: 
+  number_of_shares: 
+  cost_per_share: 
+
+two:
+  company: 
+  number_of_shares: 
+  cost_per_share: 

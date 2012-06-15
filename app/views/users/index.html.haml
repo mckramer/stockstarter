@@ -1,0 +1,16 @@
+- content_for :page_title, "Users"
+- unless @users.empty?
+  %table
+    %tr
+      %th Name
+      %th
+    - @users.each do |user|
+      %tr
+        %td= user.company
+        %td
+          = link_to user do
+            %i.icon-search
+            View
+- else
+  %p There are no users, sorry.
+= link_to 'New user', new_user_path

@@ -1,0 +1,10 @@
+= simple_form_for(@company_user) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :company
+    = f.association :user
+    = f.input :role
+
+  .form-actions
+    = f.button :submit

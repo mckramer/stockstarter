@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @order.user
+%p
+  %b Funding round:
+  = @order.funding_round
+%p
+  %b Shares:
+  = @order.shares
+
+= link_to 'Edit', edit_order_path(@order)
+\|
+= link_to 'Back', orders_path

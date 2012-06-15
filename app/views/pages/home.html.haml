@@ -1,0 +1,22 @@
+- content_for :page_title, 'StockStarter'
+- content_for :page_subtitle, 'Welcome to bliss!'
+- content_for :hero do
+  = image_tag "http://placehold.it/400x180"
+.row
+  .span8
+    %h3 Online fleet management
+    %p Optimize your business by easily managing your vehicles in one place. Use Fleetio to keep up with your fleet from work, home or on the go with your mobile device.</p>
+  .span4
+    %ul.thumbnails
+      %li.span4
+        = link_to root_path, class: "thumbnail" do
+          = image_tag "http://placehold.it/360x250"
+.row
+  .span4
+    %ul.thumbnails
+      %li.span4
+        = link_to root_path, class: "thumbnail" do
+          = image_tag "http://placehold.it/360x200"
+  .span8
+    <h3>Fleet maintenance software keeps vehicles on the road longer</h3>
+    <p> Minimize unplanned downtime and gain better control over your maintenance costs. Stop wondering when the last time a particular truck had an oil change. Keep track of vendors and be able to quickly see how much you're spending at each shop.</p>

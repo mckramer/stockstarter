@@ -1,0 +1,16 @@
+﻿- if flash[:success]
+  .alert.success
+    %a.close{ "data-dismiss" => "alert"} ×
+    = flash[:success]
+- if flash[:error]
+  .alert.error
+    %a.close{ "data-dismiss" => "alert"} ×
+    = flash[:error]
+- if flash[:warning]
+  .alert.warning
+    %a.close{ "data-dismiss" => "alert"} ×
+    = flash[:warning]
+- if flash[:notice]
+  .alert.info
+    %a.close{ "data-dismiss" => "alert"} ×
+    = flash[:notice]

@@ -1,0 +1,54 @@
+.navbar
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{ data: { toggle: "collapse", target: ".nav-collapse" } }
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to t('site_title'), root_path, class: 'brand'
+      .nav-collapse
+        %ul.nav
+          %li= link_to 'Explore', "/explore"
+          %li= link_to 'How it works', how_path
+          %li.divider-vertical
+          %li= link_to 'About', about_path
+          %li= link_to 'Contact', contact_path
+        %ul.nav.pull-right
+          - if current_user
+            %li.dropdown
+              %a.dropdown-toggle{ href: "#nav", data: { toggle: "dropdown" } } 
+                %i.icon-user
+                Account
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  = link_to "/profile" do
+                    %i.icon-book
+                    My profile
+                %li
+                  = link_to "/settings" do
+                    %i.icon-cog
+                    My settings
+                %li
+                  = link_to "/profile/companies" do
+                    %i.icon-home
+                    My companies
+                %li
+                  = link_to "/profile/shares" do
+                    %i.icon-gift
+                    My shares
+                %li.divider
+                %li
+                  = link_to "/logout" do
+                    %i.icon-off
+                    Logout
+          - else
+            %li
+              = link_to "/register" do
+                %i.icon-plus
+                Create an account
+            %li
+              = link_to "/login" do
+                %i.icon-lock
+                Login
+          

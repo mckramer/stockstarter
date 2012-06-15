@@ -1,0 +1,16 @@
+= simple_form_for(@funding_round) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.association :company
+    = f.input :number_of_shares
+    = f.input :cost_per_share, :wrapper => :prepend_and_append do
+      = content_tag :span, "$", class: "add-on"
+      = f.number_field :cost_per_share
+      = content_tag :span, ".00", class: "add-on"
+  .form-actions
+    = f.button :submit, class: 'btn-primary'
+    = submit_tag 'Reset', type: :reset, class: "btn btn-danger"
+    - if @funding_round.new_record?
+      = link_to 'Cancel, and return to viewing funding rounds', funding_rounds_path, class: "btn"
+    - else
+      = link_to 'Cancel, and return to viewing the funding round', @funding_round, class: "btn"

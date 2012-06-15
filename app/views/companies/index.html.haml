@@ -1,0 +1,19 @@
+- content_for :page_title, "Listing companies"
+- unless @companies.empty?
+  %table
+    %tr
+      %th Name
+      %th Description
+      %th
+    - @companies.each do |company|
+      %tr
+        %td= company.name
+        %td= company.description
+        %td
+          = link_to company do
+            %i.icon-search
+            View
+- else
+  %p Sorry, there aren't any companies.
+.well
+  = link_to 'Add new company', new_company_path, class: 'btn'

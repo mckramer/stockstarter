@@ -1,0 +1,44 @@
+- content_for :page_title, "About us"
+- content_for :page_subtitle, "An inside look at the people behind the curtain"
+%h2 Our story
+%p The story begins in March 2012, where the grinch came out of the cave and did big things.
+%p Following the ratifcation of the JOBS Act of 2012, we opened the doors to our platform after linking up with some important company partners.
+.row
+  .span6.offset3
+    .well
+      %p 
+        %big Our goal is to help people and businesses invest as private companies.
+%h2 Our people
+.row
+  .span6
+    %h3 Matt Benoit
+    %p Matt is a passionate software entrepreneur with more than 10 years experience in technology. He's worked at large and small companies, developed and launched products from scratch, and held strategic management roles before starting his own company. 
+    %p= link_to "@benoit", "https://twitter.com/benoit"
+  .span6
+    %ul.thumbnails
+      %li.span6
+        = image_tag "http://placehold.it/450x250"
+.row
+  .span6
+    %ul.thumbnails
+      %li.span6
+        = image_tag "http://placehold.it/450x250"
+  .span6
+    %h3 Peter Benoit
+    %p Peter is a passionate software entrepreneur with more than 10 years experience in technology. He's worked at large and small companies, developed and launched products from scratch, and held strategic management roles before starting his own company. 
+    %p= link_to "@benoit", "https://twitter.com/benoit"
+.row  
+  .span6
+    %h3 Max Kramer
+    %p Max is a passionate software entrepreneur with more than 10 years experience in technology. He's worked at large and small companies, developed and launched products from scratch, and held strategic management roles before starting his own company. 
+    %p Connect
+    %p
+      = link_to "stockstarter", "/user/1"
+      |
+      = mail_to "maxkramer@stockstarter.com", "email"
+      |
+      = link_to "@maxckramer", "https://twitter.com/maxckramer"
+  .span6
+    %ul.thumbnails
+      %li.span6
+        = image_tag "http://placehold.it/450x250"
