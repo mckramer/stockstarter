@@ -51,7 +51,7 @@ class FundingRoundsController < ApplicationController
 
     respond_to do |format|
       if @funding_round.save
-        format.html { redirect_to @funding_round, notice: 'Funding round was successfully created.' }
+        format.html { redirect_to @funding_round, only_path: true,  notice: 'Funding round was successfully created.' }
         format.json { render json: @funding_round, status: :created, location: @funding_round }
       else
         format.html { render action: "new" }
@@ -67,7 +67,7 @@ class FundingRoundsController < ApplicationController
 
     respond_to do |format|
       if @funding_round.update_attributes(params[:funding_round])
-        format.html { redirect_to @funding_round, notice: 'Funding round was successfully updated.' }
+        format.html { redirect_to @funding_round, only_path: true, notice: 'Funding round was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
